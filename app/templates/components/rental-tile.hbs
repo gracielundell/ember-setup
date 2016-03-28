@@ -1,8 +1,10 @@
 <!-- put into ul on index.hbs -->
 <li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}
   {{#if isImageShowing }}
-    <p><img src={{rental.image}} alt={{rental.type}} ></p>
+    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
   {{else}}
-    <button>Show Image</button>
+    <!-- btn links to action triggered in .js counterpart, change to true -->
+    <button {{action 'imageShow'}}>Show Image</button>
   {{/if}}
+  <button {{action 'delete' rental}}>Delete Listing</button>
 </li>
