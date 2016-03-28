@@ -5,6 +5,7 @@ We hope you find exactly what you're looking for in a place to stay.
 <ul>
   {{#each model as |rental|}}
   <!-- rendering our new component by calling: -->
+  <!-- declare rental-in-component = rental-in-template in order to correctly pass the component the object(s) it needs, on the rent -->
     {{rental-tile rental=rental}}
   {{/each}}
 </ul>
