@@ -1,19 +1,15 @@
-<h1> Welcome to Super Rentals </h1>
-
-We hope you find exactly what you're looking for in a place to stay.
+<h1>Important!</h1>
 
 <ul>
-  {{#each model as |rental|}}
+  {{#each model as |announcement|}}
   <!-- rendering our new component by calling: -->
   <!-- declare rental-in-component = rental-in-template in order to correctly pass the component the object(s) it needs, on the rent -->
   <!-- component = route handler -->
-    {{rental-tile rental=rental destroyRental="destroyRental"}}
+    {{announcement-tile announcement=announcement destroyAnnouncement="destroyAnnouncement"}}
   {{/each}}
 </ul>
 
-{{new-rental save2="save3"}}
-
 {{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Contact{{/link-to}}
 {{#link-to 'index'}}Index{{/link-to}}
+{{#link-to 'contact'}}Contact{{/link-to}}
 {{#link-to 'announcement'}}Announcements{{/link-to}}
